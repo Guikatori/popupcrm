@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="appContainer">
+                <table class="productsTable" id="prodTable">
+                    <div class="appHeader">
+                        <img src="https://sunhub.app.br/wp-content/uploads/2021/08/full.svg" width="160" height="30" class="logoImage">
+                        <input class="filterInput" type="text" placeholder="Buscar...">
+                    </div>
+                    <tr class="tableHeader">
+                        <th></th>
+                        <th><span class="headerText">Imagem <i class="fi fi-rr-picture"></i></span></th>
+                        <th><span class="headerText">Item <i class="fi fi-rr-box-open"></i></span></th>
+                        <th><span class="headerText">Quantidade <i class="fi fi-rr-calculator"></i></span></th>
+                        <th><span class="headerText">Valor <i class="fi fi-rr-usd-circle"></i></span></th>
+                        <th><span class="headerText">Ref <i class="fi fi-rr-barcode-read"></i></span></th>
+                    </tr>
+                    <tr class="productRow">
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td><img src="" width="30" height="30" class="productImage"></td>
+                        <td><span class="productName">Kit solar Fotovoltaico</span></td>
+                        <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
+                        <td>R$32.500,00</td>
+                        <td>0001Z-ADE</td>
+                    </tr>
+                    <tr class="productRow">
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td><img src="" width="30" height="30" class="productImage"></td>
+                        <td><span class="productName">Kit solar Fotovoltaico</span></td>
+                        <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
+                        <td>R$32.500,00</td>
+                        <td>0001Z-ADE</td>
+                    </tr>
+                    <tr class="productRow">
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td><img src="" width="30" height="30" class="productImage"></td>
+                        <td><span class="productName">Kit solar Fotovoltaico</span></td>
+                        <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
+                        <td>R$32.500,00</td>
+                        <td>0001Z-ADE</td>
+                    </tr>
+                    <tr class="productRow">
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td><img src="" width="30" height="30" class="productImage"></td>
+                        <td><span class="productName">Kit solar Fotovoltaico</span></td>
+                        <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
+                        <td>R$32.500,00</td>
+                        <td>0001Z-ADE</td>
+                    </tr>
+                    <tr class="productRow">
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td><img src="" width="30" height="30" class="productImage"></td>
+                        <td><span class="productName">Kit solar Fotovoltaico</span></td>
+                        <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
+                        <td>R$32.500,00</td>
+                        <td>0001Z-ADE</td>
+                    </tr>
+                
+                </table>
+                <div class="footer">
+                    <span class="itensQuantity">38 itens <i class="fi fi-rr-box-open"></i></span>
+                    <button class="saveBtn">Salvar <i class="fi fi-rr-disk"></i></button>
+                    <div class="arrowsContainer">
+                        <button class="nextPage"><i class="fi fi-rr-arrow-right"></i></button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        font-family: "Exo", sans-serif;
+        margin: 0px;
+        padding: 0px;
+        outline: none;
+
+
+    }
+    .app, body, html {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .app {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .appContainer{
+
+        width: 99%;
+        height: 99%;        
+        border: 1px solid #e1e0e0;
+        border-radius: 8px;
+    }
+
+    .appHeader {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        
+
+    }
+
+    .filterInput {
+
+        border: none;
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        width: 10%;
+        padding: 5px;
+        border-radius: 8px;
+        background-color: white;
+        color: #000000;
+        border: 1px solid #e1e0e0;
+
+    }
+
+    .productsTable{
+        width: 100%;
+        height: 70%;
+        max-height: 80%;
+        overflow-y: auto;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 4px;
+    }
+
+    .tableHeader {
+
+        height: 5%;
+    }
+
+    .productImage {
+
+        border-radius: 4px;
+        
+    }
+
+    .productName {
+
+        font-weight: 500;
+    }
+
+    .quantityBtn {
+
+        width: 5%;
+        border: none;
+        font-weight: bold;
+        color: #ec6716;
+        margin: 0px 3px 0px 3px;
+        border: 1px solid #e1e0e0;
+        border-radius: 4px;
+    }
+
+    .quantityInput {
+
+        width: 20%;
+        border: 1px solid #e1e0e0;
+        border-radius: 4px;
+    }
+
+    .productRow {
+
+        border-bottom: 1px solid whitesmoke;
+        padding: 25px;
+        font-size: 14px;
+    }
+
+    .footer {
+
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        font-weight: bold;
+
+    }
+
+
+    .saveBtn {
+
+        padding: 8px;
+        color: white;
+        font-weight: bold;
+        background-color: #ec6716;
+        border: none;
+        border-radius: 6px;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .saveBtn > i {
+
+        margin-left: 5px;
+    }
+
+    .beforePage, .nextPage {
+
+        background-color: white;
+        border: none;
+        font-size: 16px;
+    }
+
+
+</style>
