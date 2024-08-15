@@ -12,17 +12,17 @@
         <div class="appContainer">
             <div class="appHeader">
                 <img src="https://sunhub.app.br/wp-content/uploads/2021/08/full.svg" width="160" height="30" class="logoImage">
-                <input class="filterInput" type="text" placeholder="Buscar...">
+                <input class="filterInput" type="text" placeholder="Buscar">
             </div>
                 <div class="tableDiv" id="tableContainer">
                 <table class="productsTable" id="prodTable">
                     <tr class="tableHeader">
                         <th class="headerText"></th>
-                        <th class="headerText"><span class="headerText">Imagem <i class="fi fi-rr-picture"></i></span></th>
+                        <th class="headerText"><span class="headerText tiraricon">Imagem <i class="fi fi-rr-picture"></i></span></th>
                         <th class="headerText"><span class="headerText">Item <i class="fi fi-rr-box-open"></i></span></th>
-                        <th class="headerText"><span class="headerText">Quantidade <i class="fi fi-rr-calculator"></i></span></th>
-                        <th class="headerText"><span class="headerText">Valor <i class="fi fi-rr-usd-circle"></i></span></th>
-                        <th class="headerText"><span class="headerText">Ref <i class="fi fi-rr-barcode-read"></i></span></th>
+                        <th class="headerText"><span class="headerText tiraricon">Quantidade <i class="fi fi-rr-calculator"></i></span></th>
+                        <th class="headerText"><span class="headerText valorespacado">Valor <i class="fi fi-rr-usd-circle"></i></span></th>
+                        <th class="headerText"><span class="headerText refespacado tiraricon">Ref <i class="fi fi-rr-barcode-read"></i></span></th>
                     </tr>
                 </table>
                 </div>
@@ -148,10 +148,9 @@
                 title: productName,
                 html: `
                     <img src="${productImage}" width="100" height="100" style="border-radius: 8px;">
-                    <div class=""
                     <p><strong>Preço Unitário:</strong> ${formatBRL(unitPrice)}</p>
                     <p><strong>Código do Produto:</strong> ${productCode}</p><br>
-                    <p><strong>Descrição:</strong> ${productDescription}</p>
+                    <div class="product-description"> <p><strong>Descrição:</strong>${productDescription}</p>
 
                 `,
                 heightAuto: false,
@@ -214,8 +213,8 @@
                         <td class="productColumn" id="imageColumn"><img src=${products.ImageUrl ?? "https://cdn-icons-png.flaticon.com/512/679/679720.png"} width="35" height="35" class="productImage"></td>
                         <td class="productColumn"><span class="productName">${products.Name}</span></td>
                         <td class="productColumn"><button class="quantityBtn" onclick="event.stopPropagation(); decrementQuantity(this)">-</button><input type="number" min="0" value="0" class="quantityInput" placeholder="Qtd." onclick="event.stopPropagation();"><button class="quantityBtn" onclick="event.stopPropagation(); incrementQuantity(this)">+</button></td>
-                        <td class="productColumn">${formatBRL(products.UnitPrice)}</td>
-                        <td class="productColumn">${products.Code ?? 'N/A'}</td>
+                        <td class="productColumn valorespacado">${formatBRL(products.UnitPrice)}</td>
+                        <td class="productColumn refespacado">${products.Code ?? 'N/A'}</td>
 
                     
                     `;
@@ -455,7 +454,19 @@
 
     }
 
+    .product-info {
+    margin-bottom: 10px; 
+}
 
+.product-description {
+    max-height: 200px; 
+    overflow-y: auto; 
+    padding-top: 10px; 
+}
+
+.description-content {
+    padding: 10px; 
+}
     
 
     .saveBtn {
@@ -513,6 +524,107 @@
     .swal2-popup .swal2-styled:focus {
     box-shadow: none !important;
     }
+    .infoadicional{
+        overflow: auto;
+    }
+
+    @media screen and (max-width: 720px){
+    .app{
+        height: 100%;
+        width: 100%;
+    }
+    .appContainer{
+        height: 100%;
+        width: 100%;
+        font-size: 14px;
+    }
+    .appHeader{
+        justify-content: space-between;
+
+    }.productsTable{
+        height: 15%;
+    }
+    .footer{
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 1%;
+    }
+    .saveBtn{
+        width: 20%;
+        margin-right: 8%;
+    }
+    .productRow{
+        font-size: 16px;
+        height: 100px;
+    }.tiraricon > i{
+        display: none;
+    }.valorespacado{
+        padding: 0px 40px 0px 0px;
+    }.refespacado{
+        padding: 0px 5px 0px 0px;
+    }.filterInput{
+        width: 30%;
+    }.quantityBtn{
+        width: 25%;
+    }.quantityInput{
+        width: 10%;
+
+    }.swal2-popup {
+    height: 80vh; 
+    overflow: hidden; 
+  }.swalProduct{
+        height: 65%;
+    }.infoadicional{
+        overflow-y: auto;
+    }
+    }
+
+    @media screen and (max-width: 500px ){
+    .app{
+        height: 100%;
+        width: 100%;
+    }
+    .appContainer{
+        height: 100%;
+        width: 99%;
+        font-size: 12px;
+    }
+    .appHeader{
+        justify-content: space-between;
+
+    }
+    .footer{
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 1%;
+    }
+    .saveBtn{
+        width: 35%;
+        margin-right: 8%;
+    }
+    .productRow{
+        font-size: 12px;
+        height: 120px;
+    }.tiraricon > i{
+        display: none;
+    }.valorespacado{
+        padding: 0px 20px 0px 0px;
+    }.refespacado{
+        padding: 0px 5px 0px 0px;
+    }.filterInput{
+        width: 30%;
+    }.productImage{
+        display: flex;
+        width: 40px;
+        height: auto;
+        margin-left: 12px;
+    } .swal2-popup {
+    height: 70vh; 
+    overflow: hidden; 
+  }.swalProduct{
+        height: 60%;
+    }
     
+}
 
 </style>

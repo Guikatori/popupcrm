@@ -15,51 +15,51 @@
                     </div>
                     <tr class="tableHeader">
                         <th></th>
-                        <th><span class="headerText">Imagem <i class="fi fi-rr-picture"></i></span></th>
+                        <th><span class="tiraricon">Imagem <i class="fi fi-rr-picture"></i></span></th>
                         <th><span class="headerText">Item <i class="fi fi-rr-box-open"></i></span></th>
                         <th><span class="headerText">Quantidade <i class="fi fi-rr-calculator"></i></span></th>
-                        <th><span class="headerText">Valor <i class="fi fi-rr-usd-circle"></i></span></th>
-                        <th><span class="headerText">Ref <i class="fi fi-rr-barcode-read"></i></span></th>
+                        <th><span class="headerText valorespacado">Valor <i class="fi fi-rr-usd-circle"></i></span></th>
+                        <th><span class="headerText refespacado">Ref <i class="fi fi-rr-barcode-read"></i></span></th>
                     </tr>
                     <tr class="productRow">
                         <td><input type="checkbox" class="checkItem"></td>
                         <td><img src="" width="30" height="30" class="productImage"></td>
                         <td><span class="productName">Kit solar Fotovoltaico</span></td>
                         <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
-                        <td>R$32.500,00</td>
-                        <td>0001Z-ADE</td>
+                        <td class="valorespacado">R$32.500,00</td>
+                        <td class="refespacado">0001Z-ADE</td>
                     </tr>
                     <tr class="productRow">
                         <td><input type="checkbox" class="checkItem"></td>
                         <td><img src="" width="30" height="30" class="productImage"></td>
                         <td><span class="productName">Kit solar Fotovoltaico</span></td>
                         <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
-                        <td>R$32.500,00</td>
-                        <td>0001Z-ADE</td>
+                        <td class="valorespacado">R$32.500,00</td>
+                        <td class="refespacado">0001Z-ADE</td>
                     </tr>
                     <tr class="productRow">
                         <td><input type="checkbox" class="checkItem"></td>
                         <td><img src="" width="30" height="30" class="productImage"></td>
                         <td><span class="productName">Kit solar Fotovoltaico</span></td>
                         <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
-                        <td>R$32.500,00</td>
-                        <td>0001Z-ADE</td>
+                        <td class="valorespacado">R$32.500,00</td>
+                        <td class="refespacado">0001Z-ADE</td>
                     </tr>
                     <tr class="productRow">
                         <td><input type="checkbox" class="checkItem"></td>
                         <td><img src="" width="30" height="30" class="productImage"></td>
                         <td><span class="productName">Kit solar Fotovoltaico</span></td>
                         <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
-                        <td>R$32.500,00</td>
-                        <td>0001Z-ADE</td>
+                        <td class="valorespacado">R$32.500,00</td>
+                        <td class="refespacado">0001Z-ADE</td>
                     </tr>
                     <tr class="productRow">
                         <td><input type="checkbox" class="checkItem"></td>
                         <td><img src="" width="30" height="30" class="productImage"></td>
                         <td><span class="productName">Kit solar Fotovoltaico</span></td>
                         <td><button class="quantityBtn">+</button><input type="number" class="quantityInput" placeholder="Qtd."><button class="quantityBtn">-</button></td>
-                        <td>R$32.500,00</td>
-                        <td>0001Z-ADE</td>
+                        <td class="valorespacado">R$32.500,00</td>
+                        <td class="refespacado">0001Z-ADE</td>
                     </tr>
                 
                 </table>
@@ -99,6 +99,10 @@
         align-items: center;
     }
 
+    .valorespacado{
+        overflow: auto;
+    }
+
     .appContainer{
 
         width: 99%;
@@ -115,6 +119,10 @@
         padding: 8px;
         
 
+    }
+
+    .tiraricon{
+        overflow: auto;
     }
 
     .filterInput {
@@ -223,5 +231,82 @@
         font-size: 16px;
     }
 
+    @media screen and (max-width: 720px){
+    .app{
+        height: 100%;
+        width: 100%;
+    }
+    .appContainer{
+        height: 70%;
+        width: 95%;
+        font-size: 14px;
+    }
+    .appHeader{
+        justify-content: space-between;
 
+    }
+    .footer{
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 1%;
+    }
+    .saveBtn{
+        width: 20%;
+        margin-right: 8%;
+    }
+    .productRow{
+        font-size: 12px;
+    }.tiraricon > i{
+        display: none;
+    }.valorespacado{
+        padding: 0px 40px 0px 0px;
+    }.refespacado{
+        padding: 0px 5px 0px 0px;
+    }.filterInput{
+        width: 30%;
+    }.quantityBtn{
+        width: 15%;
+    }.quantityInput{
+        width: 10%;
+
+    }
+    }
+
+    @media screen and (max-width: 500px ){
+    .app{
+        height: 90%;
+        width: 100%;
+    }
+    .appContainer{
+        height: 70%;
+        width: 95%;
+        font-size: 12px;
+    }
+    .appHeader{
+        justify-content: space-between;
+
+    }
+    .footer{
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 1%;
+    }
+    .saveBtn{
+        width: 20%;
+        margin-right: 8%;
+    }
+    .productRow{
+        font-size: 12px;
+    }.tiraricon > i{
+        display: none;
+    }.valorespacado{
+        padding: 0px 40px 0px 0px;
+    }.refespacado{
+        padding: 0px 5px 0px 0px;
+    }.filterInput{
+        width: 30%;
+    }    .filterInput::placeholder {
+        color: transparent; 
+    }
+}
 </style>
